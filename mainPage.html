@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemodialysis Form</title>
+    <link rel="stylesheet" href="mainPageCSS.css">
+</head>
+<body>
+    <section>
+        <img src="images/aimsLogo.png" alt="AIMS logo" height="150px" id="aimsLogo">
+        <h1>Hemodialysis details of patient</h1>
+        <img src="images/VNIT_logo.png" alt="VNIT logo" height="150px" id="vnitlogo">
+    </section>
+
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </div>
+
+    <form action="submit_form.php" method="post">
+        <label for="sessionId">Session ID:</label>
+        <input type="text" id="sessionId" name="sessionId">
+
+        <!-- Repeat the above structure for each parameter -->
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age">
+
+        <!-- Add more parameters as needed -->
+        <label for="sex" style="display: inline-block;">Sex:</label>
+    <select id="sex" name="sex" style="margin-left: 30px;">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="dryWeight">Dry Weight:</label>
+    <input type="text" id="dryWeight" name="dryWeight">
+
+    <label for="idwg">IDWG:</label>
+    <input type="text" id="idwg" name="idwg">
+
+    <label for="ktv">Kt/V:</label>
+    <input type="text" id="ktv" name="ktv">
+
+    <label for="dialyzerSurfaceArea">Dialyzer Surface Area:</label>
+    <input type="text" id="dialyzerSurfaceArea" name="dialyzerSurfaceArea">
+
+    <label for="dialyzerFlux">Dialyzer Flux:</label>
+    <input type="text" id="dialyzerFlux" name="dialyzerFlux">
+
+    <label for="vascularAccess">Vascular Access:</label>
+    <input type="text" id="vascularAccess" name="vascularAccess">
+    <label for="bloodFlow">Blood Flow:</label>
+    <input type="text" id="bloodFlow" name="bloodFlow">
+
+    <label for="dialysateFlow">Dialysate Flow:</label>
+    <input type="text" id="dialysateFlow" name="dialysateFlow">
+
+    <label for="totalUFTime">Total UF Time (hours):</label>
+    <input type="text" id="totalUFTime" name="totalUFTime">
+
+    <label for="totalUFDone">Total UF Done (Litres):</label>
+    <input type="text" id="totalUFDone" name="totalUFDone">
+
+    <!-- Add more parameters as needed -->
+    <label for="preHDWeight">PreHD Weight:</label>
+    <input type="text" id="preHDWeight" name="preHDWeight">
+
+    <label for="postHDWeight">PostHD Weight:</label>
+    <input type="text" id="postHDWeight" name="postHDWeight">
+
+    <label for="preHDSBP">PreHD SBP:</label>
+    <input type="text" id="preHDSBP" name="preHDSBP">
+
+    <label for="preHDDBP">PreHD DBP:</label>
+    <input type="text" id="preHDDBP" name="preHDDBP">
+
+    <label for="intradialyticSBP1">Intradialytic SBP1:</label>
+    <input type="text" id="intradialyticSBP1" name="intradialyticSBP1">
+
+    <label for="intradialyticDBP1">Intradialytic DBP1:</label>
+    <input type="text" id="intradialyticDBP1" name="intradialyticDBP1">
+
+    <label for="intradialyticSBP2">Intradialytic SBP2:</label>
+    <input type="text" id="intradialyticSBP2" name="intradialyticSBP2">
+
+    <label for="intradialyticDBP2">Intradialytic DBP2:</label>
+    <input type="text" id="intradialyticDBP2" name="intradialyticDBP2">
+
+    <label for="intradialyticSBP3">Intradialytic SBP3:</label>
+    <input type="text" id="intradialyticSBP3" name="intradialyticSBP3">
+
+    <label for="intradialyticDBP3">Intradialytic DBP3:</label>
+    <input type="text" id="intradialyticDBP3" name="intradialyticDBP3">
+
+    <label for="intradialyticSBP4">Intradialytic SBP4:</label>
+    <input type="text" id="intradialyticSBP4" name="intradialyticSBP4">
+
+    <label for="intradialyticDBP4">Intradialytic DBP4:</label>
+    <input type="text" id="intradialyticDBP4" name="intradialyticDBP4">
+
+    <label for="intradialyticSBP5">Intradialytic SBP5:</label>
+    <input type="text" id="intradialyticSBP5" name="intradialyticSBP5">
+
+    <label for="intradialyticDBP5">Intradialytic DBP5:</label>
+    <input type="text" id="intradialyticDBP5" name="intradialyticDBP5">
+
+    <label for="intradialyticSBP6">Intradialytic SBP6:</label>
+    <input type="text" id="intradialyticSBP6" name="intradialyticSBP6">
+
+    <label for="intradialyticDBP6">Intradialytic DBP6:</label>
+    <input type="text" id="intradialyticDBP6" name="intradialyticDBP6">
+
+    <label for="intradialyticSBP7">Intradialytic SBP7:</label>
+    <input type="text" id="intradialyticSBP7" name="intradialyticSBP7">
+
+    <label for="intradialyticDBP7">Intradialytic DBP7:</label>
+    <input type="text" id="intradialyticDBP7" name="intradialyticDBP7">
+
+    <label for="intradialyticSBP8">Intradialytic SBP8:</label>
+    <input type="text" id="intradialyticSBP8" name="intradialyticSBP8">
+
+    <label for="intradialyticDBP8">Intradialytic DBP8:</label>
+    <input type="text" id="intradialyticDBP8" name="intradialyticDBP8">
+
+
+
+
+    <label for="postHDBP">PostHD BP:</label>
+    <input type="text" id="postHDBP" name="postHDBP">
+
+    <label for="postHDDiastolicBP">PostHD DBP:</label>
+    <input type="text" id="postHDDiastolicBP" name="postHDDiastolicBP">
+
+   
+
+    <label for="intradialyticHypertension"style="display: inline-block;">Intradialytic Hypertension:</label>
+    <select id="intradialyticHypertension" name="intradialyticHypertension" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <label for="intradialyticHypotension"style="display: inline-block;">Intradialytic Hypotension:</label>
+    <select id="intradialyticHypotension" name="intradialyticHypotension" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+    
+
+    <label for="nausea" style="display: inline-block;">Nausea:</label>
+    <select id="nausea" name="sex" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+   <br>
+
+    <label for="Vomiting" style="display: inline-block;">Vomiting:</label>
+    <select id="Vomiting" name="Vomiting" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <br>
+
+    <label for="Cramps" style="display: inline-block;">Cramps:</label>
+    <select id="Cramps" name="Cramps" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+     <br>
+
+    <label for="seizures" style="display: inline-block;">Seizures:</label>
+    <select id="seizures" name="seizures" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <br>
+
+    <label for="dds" style="display: inline-block;">DDS:</label>
+    <select id="dds" name="dds" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    
+
+
+
+    <!-- Add more parameters as needed -->
+    <br>
+
+    <label for="hypoglycemia" style="display: inline-block;">Hypoglycemia:</label>
+    <select id="hypoglycemia" name="hypoglycemia" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <label for="chestPain" style="display: inline-block;">Chest Pain:</label>
+    <select id="chestPain" name="chestPain" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <label for="syncope" style="display: inline-block;">Syncope:</label>
+    <select id="syncope" name="syncope" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <label for="fever" style="display: inline-block;">Fever:</label>
+    <select id="fever" name="fever" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <label for="Hemolysis" style="display: inline-block;">Hemolysis:</label>
+    <select id="Hemolysis" name="Hemolysis" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <label for="airEmbolism" style="display: inline-block;">Air Embolism:</label>
+    <select id="airEmbolism" name="airEmbolism" style="margin-left: 30px;">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    
+
+
+    
+
+    <!-- Add more parameters as needed -->
+
+    <label for="recentHb">Recent Hb:</label>
+    <input type="text" id="recentHb" name="recentHb">
+
+    <label for="recentCreatinine">Recent Creatinine:</label>
+    <input type="text" id="recentCreatinine" name="recentCreatinine">
+
+    <label for="recentAlbumin">Recent Albumin:</label>
+    <input type="text" id="recentAlbumin" name="recentAlbumin">
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Add JavaScript code for handling logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Add your logout logic here
+            alert('Logout button clicked. Implement your logout functionality.');
+        });
+    </script>
+</body>
+</html>

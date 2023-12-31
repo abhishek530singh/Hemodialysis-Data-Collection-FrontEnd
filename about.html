@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet"  href="common.css">
+    <style>
+        .content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+.container #logoutBtn:hover {
+    background-color: #c9302c;
+}
+.container #logoutBtn {
+    float: right;
+    background-color: #d9534f;
+}
+    </style>
+
+</head>
+<body>
+    <section>
+        <img src="images/aimsLogo.png" alt="AIMS logo" height="150px" id="aimsLogo">
+        <h1>Hemodialysis details of patient</h1>
+        <img src="images/VNIT_logo.png" alt="VNIT logo" height="150px" id="vnitlogo">
+    </section>
+
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </div>
+
+    <div class="content">
+        <p>Hemodialysis is a medical procedure that helps remove waste and excess fluid from the blood when the kidneys are no longer able to perform this function. It is a type of dialysis that uses a machine to filter the blood and remove toxins.</p>
+        
+        <p>During hemodialysis, the patient’s blood is pumped through a soft tube to a dialysis machine where it goes through a special filter called a dialyzer. The dialyzer has two parts, one for the blood and one for a washing fluid called dialysate. A thin membrane separates these two parts. Blood cells, protein, and other important things remain in the blood because they are too big to pass through the membrane. Smaller waste products in the blood, such as urea, creatinine, potassium, and extra fluid pass through the membrane and are washed away.</p>
+        
+        <p>Hemodialysis can be done in a hospital, in a dialysis center that is not part of a hospital, or at home. The frequency and duration of hemodialysis treatment depend on the patient’s medical condition and the doctor’s recommendation. Hemodialysis is usually done three times per week for about four hours at a time.</p>
+        
+        <p>Patients who undergo hemodialysis may experience some discomfort, but the procedure is generally safe and effective.</p>
+    </div>
+
+
+
+    <script>
+        // Add JavaScript code for handling logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Add your logout logic here
+            alert('Logout button clicked. Implement your logout functionality.');
+        });
+    </script>
+    
+</body>
+</html>
