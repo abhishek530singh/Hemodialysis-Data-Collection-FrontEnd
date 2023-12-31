@@ -1,0 +1,41 @@
+body header h1 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-weight: 900;
+	color: #000000;
+	font-size: 80px;
+}
+body header img {
+	float: left;
+	max-height: 150px;
+	max-width: 150px;
+}
+body header #img2 {
+	float: right;
+	max-height: 150px;
+	max-width: 150px;
+}
+
+
+body header {
+	display: flex;
+	min-width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #EBEBEB;
+}
+
+.center-container {
+	text-align: center;
+  }
+  
+  .center-form {
+	display: inline-block;
+	text-align: left;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
