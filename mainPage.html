@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemodialysis Form</title>
     <link rel="stylesheet" href="mainPageCSS.css">
+    <style>
+        select{
+            margin-left: 20vw;
+        }
+        .attselect{
+            display: inline;
+        }
+    </style>
 </head>
 <body>
     <section>
@@ -21,241 +29,378 @@
     </div>
 
     <form action="submit_form.php" method="post">
-        <label for="sessionId">Session ID:</label>
-        <input type="text" id="sessionId" name="sessionId">
+        
+        <label for="name">Name</label>
+        <input type="text" required id="name" autofocus>
+        <label for="name">Age</label>
+        <input type="number" required id="age" autofocus>
+        <label for="crNum">CR No.</label>
+        <input type="number" id="crNum"  required >
+        <label for="crNum">Gender</label>
+        <input type="number" id="crNum"  required >
+        
+        <label class="attselect">Race</label>
+        <select name="race" id="race" required>
+            <option value="Indian" id="Indian">Indian</option>
+            <option>
+                American Indian 
+            </option>
+            <option>
+                Alaskan Native
+            </option>
+            <option value="Asian">Asian</option>
+            <option value="Black">Black</option>
+            <option value="African American">African American</option>
+            <option value="Hispanic" id="Hispanic">Hispanic</option>
+            <option value="Latino" id="Latino">Latino</option>
+            <option value="Native Hawaiian" id="Native Hawaiian">Native Hawaiian </option>
+            <option value="pacific islander" id="pacific islander">pacific islander</option>
+            <option value="white" id="white">White</option>
+        </select>
+
+        <label for="height">Height (in cm)</label>
+        <input name="height" type="number" id="number" required>
+
+        <label for="DOI">Date of initiation of hemodialysis </label>
+        <input type="date" name="DOI" id="DOI">
+
+        <label for="disease">Name of the primary disease</label>
+        <input type="text" name="disease" id="disease">
+
+        <label for="Hemoglobin">Hemoglobin</label>
+        <input type="number" step="0.01" name="Hemoglobin" id="Hemoglobin">
+        
+        <label for="Hematocrit">Hematocrit</label>
+        <input type="number" step="0.01" name="Hematocrit" id="Hematocrit">
+
+        <label for="Platelet count">Platelet count </label>
+        <input type="number" step="0.01" name="PlateletCount" id="PlateletCount">
+
+        <label for="ReticulocyteCount">Reticulocyte count</label>
+        <input type="number" step="0.01" name="ReticulocyteCount" id="ReticulocyteCount">
+
+        <label for="SerumTotalProtein">Serum total protein</label>
+        <input type="number" step="0.01" name="SerumTotalProtein" id="SerumTotalProtein">
+
+        <label for="SerumAlbumin">Serum albumin</label>
+        <input type="number" step="0.01" name="SerumAlbumin" id="SerumAlbumin">
+
+        <label for="ALP">ALP</label>
+        <input type="number" step="0.01" name="ALP" id="ALP">
+
+        <label for="SerumSodium">Serum Sodium</label>
+        <input type="number" step="0.01" name="SerumSodium" id="SerumSodium">
+
+        <label for="SerumPotassium">Serum potassium</label>
+        <input type="number" step="0.01" name="SerumPotassium" id="SerumPotassium">
+
+        <label for="SerumCalcium">Serum calcium</label>
+        <input type="number" step="0.01" name="SerumCalcium" id="SerumCalcium">
+
+        <label for="SerumPhosphate">Serum phosphate</label>
+        <input type="number" step="0.01" name="SerumPhosphate" id="SerumPhosphate">
+
+        <label for="SerumiPTH">Serum iPTH</label>
+        <input type="number" step="0.01" name="SerumiPTH" id="SerumiPTH">
+
+        <label for="SerumFerritin">Serum Ferritin</label>
+        <input type="number" step="0.01" name="SerumFerritin" id="SerumFerritin">
+
+        <label for="SerumIron">Serum Iron</label>
+        <input type="number" step="0.01" name="SerumIron" id="SerumIron">
+
+        <label for="SerumTIBC">Serum TIBC</label>
+        <input type="number" step="0.01" name="SerumTIBC" id="SerumTIBC">
+
+        <label for="BNP">BNP</label>
+        <input type="number" step="0.01" name="BNP" id="BNP">
+
+        <label for="CRP">CRP</label>
+        <input type="number" step="0.01" name="CRP" id="CRP">
+
+        <label for="DrugName">Drug Name</label>
+        <input type="text"id="DrugName" name="DrugName" required>
+
+        <label for="DrugRoute" style="display: inline;">Drug Route</label>
+        <select name="DrugRoute" id="DrugRoute" required>
+            <option value="Oral" id="Oral">Oral</option>
+            <option value="Intravenous" id="Intravenous">Intravenous</option>
+        </select>
+
+        <label for="DrugNumberUnit">Drug -number of units </label>
+        <input type="number" id="DrugNumberUnit" name="DrugNumberUnit"required>
+
+        <label for="DrugFrequency" class="attselect">Drug Frequency</label>
+        <select required name="DrugFrequency" id="DrugFrequency">
+            <option value="OnceDaily" id="OnceDaily">OnceDaily</option> 
+            <option value="TwiceDaily" id="TwiceDaily">Twice Daily</option>
+            <option value="thriceDaily" id="thriceDaily">Thrice Daily</option>
+            <option value="fourTimesDaily" id="fourTimesDaily">Four times Daily</option>
+            <option value="OnceAweek" id="OnceAweek">Once a Week</option>
+            <option value="twiceAweek" id="twiceAweek">Twice a Week</option>
+            <option value="ThriceAweek" id="ThriceAweek"> Thrice a Week</option>
+            <option value="OnceAmonth" id="OnceAmonth"> Once a Month</option>
+            <option value="OnceDailyonlyAtNight" id="OnceDailyonlyAtNight">Once Daily only At Night</option>
+        </select>
+
+        <label for="drugDose"> Drug Dose</label>
+        <input type="number" step="0.01" value="drugDose" id="drugDose" required>
+
+        <label for="DrugStartDate">Drug DrugStartDate</label>
+        <input type="date" required>
+
+        <label for="Pulmonarycongestion" class="attselect">Pulmonary congestion
+        </label>
+        <select name="Pulmonarycongestion" required>
+            <option value="yes" id="Pulmonarycongestion">Yes</option>
+            <option value="No" id="Pulmonarycongestion">No</option>
+        </select> 
+        <br>
+        
+        <label for="PleuralEffusion" class="attselect">Pleural Effusion
+        </label>
+        <select name="PleuralEffusion" id="PleuralEffusion" required>
+            <option value="yes"  id="PleuralEffusion">Yes</option>
+            <option value="No" id="PleuralEffusion">No</option>
+        </select> 
+
+        <br>
+        <label for="OxygenAdminsitration" class="attselect">Oxygen adminsitration</label>
+        <select name="OxygenAdminsitration" id="OxygenAdminsitration" required>
+            <option value="yes"  id="OxygenAdminsitration">Yes</option>
+            <option value="No" id="OxygenAdminsitration">No</option>
+        </select> 
+        
+        <br>
+        <label for="Edema" class="attselect">Edema</label>
+        <select name="Edema" id="Edema" required>
+            <option value="yes"  id="Edema">Yes</option>
+            <option value="No" id="Edema">No</option>
+        </select> 
+
+        <br>
+        <label for="PreDialyticHypotension" class="attselect">Pre dialytic Hypotension</label>
+        <select name="PreDialyticHypotension" id="PreDialyticHypotension" required>
+            <option value="yes"  id="PreDialyticHypotension">Yes</option>
+            <option value="No" id="PreDialyticHypotension">No</option>
+        </select>
+
+        <br>
+
+        <label for="PreDialyticHypertension" class="attselect">Pre dialytic Hypertension</label>
+        <select name="PreDialyticHypertension" required>
+            <option value="yes"  id="PreDialyticHypertension">Yes</option>
+            <option value="No" id="PreDialyticHypertension">No</option>
+        </select>
+
+        <br>
+        <label for="FreqOfDialysis" class="attselect">Frequency of Dialysis</label>
+        <select name="FreqOfDialysis" id="FreqOfDialysis" required>
+            <option value="1"  id="FreqOfDialysis">1/Week</option>
+            <option value="2" id="FreqOfDialysis">2/Week</option>
+            <option value="3"id="FreqOfDialysis" >3/Week</option>
+        </select>
+        <br>
+        <label for="MembraneAreaofDialyzer">Membrane area of dialyzer</label>
+        <input type="number" step="0.01" id="MembraneAreaofDialyzer" required>
+         
+        <label for="FluxofDialyzer">Flux of dialyzer</label>
+        <select name="FluxofDialyzer" id="FluxofDialyzer" required>
+            <option value="0">low</option>
+            <option value="1">middle</option>
+            <option value="2">High</option>
+        </select>
+        <label for="bloodFlowRate">Blood Flow Rate</label>
+        <input type="number" name="bloodFlowRate" id="bloodFlowRate" required>
+        
+        <label for="DialysateFlowrate"> Dialysate Flow Rate</label>/
+        <input type="number" name="DialysateFlowrate" id="DialysateFlowrate">
+
+        <label for="DialysateSodium"> Dialysate Sodium</label>
+        <input type="number" name="DialysateSodium" id="DialysateSodium" required>
+
+        <label for="DialysateTemp">Dialysate Temperature</label>
+        <input type="number" step="0.01" name="DialysateTemp" id="DialysateTemp" required>
+
+        <label for="ResidualUrineVolume"> Residual Urine Volume</label>
+        <input type="number" name="ResidualUrineVolume" id="ResidualUrineVolume" required>
+
+        <label for="InjectableGiven">Injectable Given during Dialysis</label>
+        <textarea name="InjectableGiven" id="InjectableGiven" cols="60" rows="6" required></textarea>
+
+        <label for="InterdialyticWeightGain">Interdialytic weight gain</label>
+        <input type="number" step="0.01" name="InterdialyticWeightGain" id="InterdialyticWeightGain" required>
+
+        <label for="UltrafiltrationAchieved">Ultrafiltration Achieved </label>
+        <input type="number" step="0.01" name="UltrafiltrationAchieved" id="UltrafiltrationAchieved" required>
+
+        <label for="DurationOfDialysis">Duration of Dialysis</label>
+        <input type="number" step="0.01" name="DurationOfDialysis" id="DurationOfDialysis" required>
+
+        <label for="UltrafiltrationRate">Ultrafiltration Rate</label>
+        <input type="number" step="0.01" name="UltrafiltrationRate" id="UltrafiltrationRate" required>
+
+        <label for="CardiothoracicRatio">Cardiothoracic Ratio (CXR) </label>
+        <input type="number" step="0.01" name="CardiothoracicRatio" id="CardiothoracicRatio" required>
+
+        <label for="SystolicBPpreDialysis">Systolic BP pre dialysis</label>
+        <input type="number" name="SystolicBPpreDialysis" id="SystolicBPpreDialysis" required>
+
+        <label for="DistolicBPpreDialysis">Diastolic BP pre dialysis</label>
+        <input type="number" name="DistolicBPpreDialysis" id="DistolicBPpreDialysis" required>
+
+        <label for="PulseRate">Pulse Rate</label>
+        <input type="number" name="PulseRate" id="PulseRate" required>  
+
+        <label for="BodyTemp">Body Temperature</label>
+        <input type="number" name="BodyTemp" id="BodyTemp" required>
+
+        <label for="OxygenSaturation">Oxygen saturation</label>
+        <input type="number" name="OxygenSaturation" id="OxygenSaturation" required>
+
+        <label for="IntradialyticHypotnesion"> Intradialytic Hypotension</label>
+        <select name="IntradialyticHypotension" id="IntradialyticHypotnesion" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label for="IntradialyticHypertnesion"> Intradialytic Hypertension</label>
+        <select name="IntradialyticHypertension" id="IntradialyticHypertension" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+       
+        <label for="Nausea"> Nausea</label>
+        <select name="Nausea" id="Nausea" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+       
+        <label for="Vomiting"> Vomiting</label>
+        <select name="Vomiting" id="Vomiting" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        
+        <label for="Headache"> Headache</label>
+        <select name="Headache" id="Headache" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        
+        <label for="MuscleCramps">Muscle Cramps</label>
+        <select name="MuscleCramps" id="MuscleCramps" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label for="OtherComplication">Other Complications</label>
+        <textarea name="OtherComplication" id="OtherComplication" cols="60" rows="6" required></textarea>
+
+        <h2>ECHO Cardiographic Evaluation</h2>
+
+        <label for="AorticRootDiameter">Aortic root diameter(mm)</label>
+        <input type="number" step="0.0001" name="AorticRootDiameter" id="AorticRootDiameter" required>
+
+        <label for="IVCdiameter">IVC diameter(mm)</label>
+        <input type="number" step="0.0001" name="IVCdiameter" id="IVCdiameter">
+
+        <label for="LAdiameter">LA diameter(mm)</label>
+        <input type="number" step="0.0001" name="LAdiameter" id="LAdiameter">
+
+        <label for="LAVi">LAVi, ml/min</label>
+        <input type="number" step="0.0001" name="LAVi" id="LAVi">
+
+        <label for="LVEDD">LVEDD, mm</label>
+        <input type="number" step="0.0001" name="LVEDD" id="LVEDD">
+
+        <label for="LVESD">LVESD, mm</label>
+        <input type="number" step="0.0001" name="LVESD" id="LVESD">
+
+        <label for="LVEDVi">LVEDVi, ml/m2</label>
+        <input type="number" step="0.0001" name="LVEDVi" id="LVEDVi">
+        
+        <label for="LVESVi">LVESVi, ml/m2</label>
+        <input type="number" step="0.0001" name="LVESVi" id="LVESVi">
+        
+        <label for="LVMI">LVMI, g/m2</label>
+        <input type="number" step="0.0001" name="LVMI" id="LVMI">
+        
+        <label for="LVOTdiameter">LVOT diameter, mm</label>
+        <input type="number" step="0.0001" name="LVOTdiameter" id="LVOTdiameter">
+        
+        <label for="LVEjectionFraction">LV Ejection fraction</label>
+        <input type="number" step="0.0001" name="LVEjectionFraction" id="LVEjectionFraction">
+
+
+        
+        <label for="IVCcollapsibility">IVC collapsibility index</label>
+        <input type="number" step="0.0001" name="IVCcollapsibility" id="IVCcollapsibility">
+        
+        <label for="RAsurface">RA surface, cm2</label>
+        <input type="number" step="0.0001" name="RAsurface" id="RAsurface">
+        
+        <label for="RVbasediameter">RV base diameter, mm</label>
+        <input type="number" step="0.0001" name="RVbasediameter" id="RVbasediameter">
+
+        <h2>Bioimpedence Analysis</h2>
+
+        <label for="PreDialyticOverhydration">Pre dialytic overhydration(L)</label>
+        <input type="number" step="0.01" name="PreDialyticOverhydration" id="PreDialyticOverhydration">
+
+        <label for="PostDialyticOverhydration">Post dialytic overhydration(L)</label>
+        <input type="number" step="0.01" name="PostDialyticOverhydration" id="PostDialyticOverhydration">
+
+        <label for="LeanTissueIndex">Lean tissue index(kg/m2)</label>
+        <input type="number" step="0.01" name="LeanTissueIndex" id="LeanTissueIndex">
+
+        <label for="FatTissueIndex">Fat tissue index(kg/m2)</label>
+        <input type="number" step="0.01" name="FatTissueIndex" id="FatTissueIndex">
+
+        
+        <label for="totalbodywater">Total body water(L)</label>
+        <input type="number" step="0.01" name="totalbodywater" id="totalbodywater">
+
+        <label for="ExtracellularWater">Extracellular water(L)</label>
+        <input type="number" step="0.01" name="ExtracellularWater" id="ExtracellularWater">
+
+        <label for="IntracellularWater">Intracellular water(L)</label>
+        <input type="number" step="0.01" name="IntracellularWater" id="IntracellularWater">
+
+        <label for="ECWICW">ECW/ICW</label>
+        <input type="number" step="0.01" name="ECWICW" id="ECWICW">
+
+        <h2>Ultrasound Evaluation</h2>
+        <label for="USGBlinescore">USG B line score, lines</label>
+        <input type="number" step="0.01" name="USGBlinescore" id="USGBlinescore">
+
+        
+
+        <label for="DryWeight">Nephrologist determined dry weight</label>
+        <input type="number" step="0.01" name="DryWeight" id="DryWeight" required>
+
+
+        <label for="VascularAccess" >Vascular Access</label>
+        <select name="VascularAccess" id="VascularAccess" required>
+            <option value="AVF">AVF</option>
+            <option value="HDcatheter">HD catheter</option>
+            <option value="AVGraft">AV Graft</option>
+        </select>
+
+        <label for="Serostatus" >Serostatus</label>
+        <select name="Serostatus" id="Serostatus" required>
+            <option value="Seronegative">Seronegative</option>
+            <option value="HIVPositive">HIV positive</option>
+            <option value="HbsagPositive">Hbsag positive</option>
+            <option value="HCVPositive">HCV positive</option>
+        </select>
 
-        <!-- Repeat the above structure for each parameter -->
 
-        <label for="age">Age:</label>
-        <input type="text" id="age" name="age">
-
-        <!-- Add more parameters as needed -->
-        <label for="sex" style="display: inline-block;">Sex:</label>
-    <select id="sex" name="sex" style="margin-left: 30px;">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-    </select>
-
-    <label for="dryWeight">Dry Weight:</label>
-    <input type="text" id="dryWeight" name="dryWeight">
-
-    <label for="idwg">IDWG:</label>
-    <input type="text" id="idwg" name="idwg">
-
-    <label for="ktv">Kt/V:</label>
-    <input type="text" id="ktv" name="ktv">
-
-    <label for="dialyzerSurfaceArea">Dialyzer Surface Area:</label>
-    <input type="text" id="dialyzerSurfaceArea" name="dialyzerSurfaceArea">
-
-    <label for="dialyzerFlux">Dialyzer Flux:</label>
-    <input type="text" id="dialyzerFlux" name="dialyzerFlux">
-
-    <label for="vascularAccess">Vascular Access:</label>
-    <input type="text" id="vascularAccess" name="vascularAccess">
-    <label for="bloodFlow">Blood Flow:</label>
-    <input type="text" id="bloodFlow" name="bloodFlow">
-
-    <label for="dialysateFlow">Dialysate Flow:</label>
-    <input type="text" id="dialysateFlow" name="dialysateFlow">
-
-    <label for="totalUFTime">Total UF Time (hours):</label>
-    <input type="text" id="totalUFTime" name="totalUFTime">
-
-    <label for="totalUFDone">Total UF Done (Litres):</label>
-    <input type="text" id="totalUFDone" name="totalUFDone">
-
-    <!-- Add more parameters as needed -->
-    <label for="preHDWeight">PreHD Weight:</label>
-    <input type="text" id="preHDWeight" name="preHDWeight">
-
-    <label for="postHDWeight">PostHD Weight:</label>
-    <input type="text" id="postHDWeight" name="postHDWeight">
-
-    <label for="preHDSBP">PreHD SBP:</label>
-    <input type="text" id="preHDSBP" name="preHDSBP">
-
-    <label for="preHDDBP">PreHD DBP:</label>
-    <input type="text" id="preHDDBP" name="preHDDBP">
-
-    <label for="intradialyticSBP1">Intradialytic SBP1:</label>
-    <input type="text" id="intradialyticSBP1" name="intradialyticSBP1">
-
-    <label for="intradialyticDBP1">Intradialytic DBP1:</label>
-    <input type="text" id="intradialyticDBP1" name="intradialyticDBP1">
-
-    <label for="intradialyticSBP2">Intradialytic SBP2:</label>
-    <input type="text" id="intradialyticSBP2" name="intradialyticSBP2">
-
-    <label for="intradialyticDBP2">Intradialytic DBP2:</label>
-    <input type="text" id="intradialyticDBP2" name="intradialyticDBP2">
-
-    <label for="intradialyticSBP3">Intradialytic SBP3:</label>
-    <input type="text" id="intradialyticSBP3" name="intradialyticSBP3">
-
-    <label for="intradialyticDBP3">Intradialytic DBP3:</label>
-    <input type="text" id="intradialyticDBP3" name="intradialyticDBP3">
-
-    <label for="intradialyticSBP4">Intradialytic SBP4:</label>
-    <input type="text" id="intradialyticSBP4" name="intradialyticSBP4">
-
-    <label for="intradialyticDBP4">Intradialytic DBP4:</label>
-    <input type="text" id="intradialyticDBP4" name="intradialyticDBP4">
-
-    <label for="intradialyticSBP5">Intradialytic SBP5:</label>
-    <input type="text" id="intradialyticSBP5" name="intradialyticSBP5">
-
-    <label for="intradialyticDBP5">Intradialytic DBP5:</label>
-    <input type="text" id="intradialyticDBP5" name="intradialyticDBP5">
-
-    <label for="intradialyticSBP6">Intradialytic SBP6:</label>
-    <input type="text" id="intradialyticSBP6" name="intradialyticSBP6">
-
-    <label for="intradialyticDBP6">Intradialytic DBP6:</label>
-    <input type="text" id="intradialyticDBP6" name="intradialyticDBP6">
-
-    <label for="intradialyticSBP7">Intradialytic SBP7:</label>
-    <input type="text" id="intradialyticSBP7" name="intradialyticSBP7">
-
-    <label for="intradialyticDBP7">Intradialytic DBP7:</label>
-    <input type="text" id="intradialyticDBP7" name="intradialyticDBP7">
-
-    <label for="intradialyticSBP8">Intradialytic SBP8:</label>
-    <input type="text" id="intradialyticSBP8" name="intradialyticSBP8">
-
-    <label for="intradialyticDBP8">Intradialytic DBP8:</label>
-    <input type="text" id="intradialyticDBP8" name="intradialyticDBP8">
-
-
-
-
-    <label for="postHDBP">PostHD BP:</label>
-    <input type="text" id="postHDBP" name="postHDBP">
-
-    <label for="postHDDiastolicBP">PostHD DBP:</label>
-    <input type="text" id="postHDDiastolicBP" name="postHDDiastolicBP">
-
-   
-
-    <label for="intradialyticHypertension"style="display: inline-block;">Intradialytic Hypertension:</label>
-    <select id="intradialyticHypertension" name="intradialyticHypertension" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-
-    <label for="intradialyticHypotension"style="display: inline-block;">Intradialytic Hypotension:</label>
-    <select id="intradialyticHypotension" name="intradialyticHypotension" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-    
-
-    <label for="nausea" style="display: inline-block;">Nausea:</label>
-    <select id="nausea" name="sex" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-
-   <br>
-
-    <label for="Vomiting" style="display: inline-block;">Vomiting:</label>
-    <select id="Vomiting" name="Vomiting" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-
-    <br>
-
-    <label for="Cramps" style="display: inline-block;">Cramps:</label>
-    <select id="Cramps" name="Cramps" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-
-     <br>
-
-    <label for="seizures" style="display: inline-block;">Seizures:</label>
-    <select id="seizures" name="seizures" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-
-    <br>
-
-    <label for="dds" style="display: inline-block;">DDS:</label>
-    <select id="dds" name="dds" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    
-
-
-
-    <!-- Add more parameters as needed -->
-    <br>
-
-    <label for="hypoglycemia" style="display: inline-block;">Hypoglycemia:</label>
-    <select id="hypoglycemia" name="hypoglycemia" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-
-    <label for="chestPain" style="display: inline-block;">Chest Pain:</label>
-    <select id="chestPain" name="chestPain" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-
-    <label for="syncope" style="display: inline-block;">Syncope:</label>
-    <select id="syncope" name="syncope" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-
-    <label for="fever" style="display: inline-block;">Fever:</label>
-    <select id="fever" name="fever" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-
-    <label for="Hemolysis" style="display: inline-block;">Hemolysis:</label>
-    <select id="Hemolysis" name="Hemolysis" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-    <br>
-
-    <label for="airEmbolism" style="display: inline-block;">Air Embolism:</label>
-    <select id="airEmbolism" name="airEmbolism" style="margin-left: 30px;">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-
-    
-
-
-    
-
-    <!-- Add more parameters as needed -->
-
-    <label for="recentHb">Recent Hb:</label>
-    <input type="text" id="recentHb" name="recentHb">
-
-    <label for="recentCreatinine">Recent Creatinine:</label>
-    <input type="text" id="recentCreatinine" name="recentCreatinine">
-
-    <label for="recentAlbumin">Recent Albumin:</label>
-    <input type="text" id="recentAlbumin" name="recentAlbumin">
 
 
         <input type="submit" value="Submit">
+
+        
     </form>
 
     <script>
